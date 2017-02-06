@@ -1,0 +1,34 @@
+.site-header {
+	background-color: white;
+	left: 0;
+	height: 190px;
+	margin-top: 0;
+	position: fixed;
+	top: 0;    
+	width: 100%;
+	z-index: 99999;
+	@include transition(margin-top 0.5s);
+
+	&.site-headerfixed {
+		height: auto;
+		.site-branding {
+			margin-top: -190px;
+		}
+	}
+	.site-branding {
+		height: 115px;
+		margin-top: 0;
+		@include transition(margin-top 0.5s);
+
+		.site-title {
+			line-height: 115px;
+
+			a {
+				display: inline-block;
+				img {
+					height: 20px;
+				}
+			}
+		}
+	}
+}
